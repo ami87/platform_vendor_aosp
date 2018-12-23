@@ -68,7 +68,12 @@ PRODUCT_PACKAGES += \
     MarkupGoogle \
     WellbeingPrebuilt \
     Recorder \
-    WeatherClient
+    WeatherClient\
+    AmbientSensePrebuilt
+    
+# Ambient, Google app and Sound search tile - music recognition
+PRODUCT_COPY_FILES +=  \
+    vendor/aosp/prebuilt/common/etc/ambient/matcher_tah.leveldb:system/etc/ambient/matcher_tah.leveldb    
 
 # Weather
 PRODUCT_COPY_FILES += \
