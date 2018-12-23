@@ -64,6 +64,9 @@ PRODUCT_PACKAGES += \
     GoogleContacts \
     GoogleDialer \
     LatinIMEGooglePrebuilt
+    
+PRODUCT_PACKAGES += \
+    CustomDoze    
 
 # Weather
 PRODUCT_PROPERTY_OVERRIDES += \
