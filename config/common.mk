@@ -63,10 +63,15 @@ PRODUCT_PACKAGES += \
     PrebuiltDeskClockGoogle \
     GoogleContacts \
     GoogleDialer \
-    LatinIMEGooglePrebuilt
+    LatinIMEGooglePrebuilt \
+    AmbientSensePrebuilt
     
 PRODUCT_PACKAGES += \
     CustomDoze    
+    
+# Ambient, Google app and Sound search tile - music recognition
+PRODUCT_COPY_FILES +=  \
+    vendor/aosp/prebuilt/common/etc/ambient/matcher_tah.leveldb:system/etc/ambient/matcher_tah.leveldb    
 
 # Weather
 PRODUCT_PROPERTY_OVERRIDES += \
