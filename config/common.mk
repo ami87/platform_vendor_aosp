@@ -64,7 +64,8 @@ PRODUCT_PACKAGES += \
     GoogleContacts \
     GoogleDialer \
     LatinIMEGooglePrebuilt \
-    AmbientSensePrebuilt
+    AmbientSensePrebuilt \
+    PrebuiltBugle
     
 PRODUCT_PACKAGES += \
     CustomDoze    
