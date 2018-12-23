@@ -14,7 +14,7 @@
 
  include vendor/aosp/config/version.mk
 
-PRODUCT_BRAND ?= AEX
+PRODUCT_BRAND ?= ABC
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
@@ -50,25 +50,20 @@ PRODUCT_PACKAGES += \
     Gcam
 endif
 
-ifeq ($(TARGET_USE_JELLY),true)
-PRODUCT_PACKAGES += \
-    Jelly
-endif
-
 PRODUCT_PACKAGES += \
     Terminal \
-    LatinIME \
     LiveWallpapers \
     LiveWallpapersPicker \
     Stk \
-    ViaBrowser \
-    AEXPapers \
-    RetroMusicPlayer \
-    WallpaperPickerGoogle \
     MarkupGoogle \
     WellbeingPrebuilt \
     Recorder \
-    WeatherClient
+    WeatherClient\
+    WallpaperPickerGooglePrebuilt \
+    PrebuiltDeskClockGoogle \
+    GoogleContacts \
+    GoogleDialer \
+    LatinIMEGooglePrebuilt
 
 # Weather
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -77,75 +72,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
     vendor/aosp/prebuilt/common/etc/permissions/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
-
-# Themes
-# Accents
-PRODUCT_PACKAGES += \
-    PixelTheme \
-    AmberAccent \
-    BlueAccent \
-    BlueGreyAccent \
-    BrownAccent \
-    CyanAccent \
-    CandyRedAccent \
-    DeepOrangeAccent \
-    DeepPurpleAccent \
-    ExtendedGreenAccent \
-    GreenAccent \
-    GreyAccent \
-    IndigoAccent \
-    JadeGreenAccent \
-    LightBlueAccent \
-    LightGreenAccent \
-    LimeAccent \
-    OrangeAccent \
-    PaleBlueAccent \
-    PaleRedAccent \
-    PinkAccent \
-    PurpleAccent \
-    RedAccent \
-    TealAccent \
-    YellowAccent
-
-# UI Variants
-PRODUCT_PACKAGES += \
-    SystemDarkTheme \
-    SettingsDarkTheme \
-    SystemUIDarkTheme \
-    SystemBlackTheme \
-    SettingsBlackTheme \
-    SystemUIBlackTheme \
-    SystemExtendedTheme \
-    SettingsExtendedTheme \
-    SystemUIExtendedTheme \
-    SystemChocolateTheme \
-    SettingsChocolateTheme \
-    SystemUIChocolateTheme \
-    ContactsThemeBlack \
-    DialerThemeBlack \
-    FilesThemeBlack \
-    ContactsThemeDark \
-    DialerThemeDark \
-    FilesThemeDark \
-    ContactsThemeChocolate \
-    DialerThemeChocolate \
-    FilesThemeChocolate \
-    WellbeingChocolateTheme \
-    ContactsThemeExtended \
-    DialerThemeExtended \
-    FilesThemeExtended \
-    WellbeingExtendedTheme
-
-# QS tile styles
-PRODUCT_PACKAGES += \
-    QStilesSquare \
-    QStilesRoundedSquare \
-    QStilesSquircle \
-    QStilesTearDrop \
-    QSTilesJustIcons \
-    QStilesCircleOutline \
-    QSTilesCircleGradient
-
 
 # Markup libs
 PRODUCT_COPY_FILES += \
@@ -161,10 +87,6 @@ PRODUCT_PACKAGES += \
     Turbo \
     turbo.xml \
     privapp-permissions-turbo.xml
-
-# Fonts
-PRODUCT_PACKAGES += \
-    CustomFonts
 
 # Extra tools
 PRODUCT_PACKAGES += \
